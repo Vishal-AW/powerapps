@@ -1,0 +1,69 @@
+{
+  "ac30ba6f-5eeb-469b-b0c7-2b9a370ebb12": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3310/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://ascenworktech.sharepoint.com/sites/Angular": {
+        "dataSources": {
+          "AM_StatusMaster": {
+            "tableName": "c92a1ac8-fdc6-48fb-ba2b-351d3ecee185"
+          },
+          "AppreciationCard": {
+            "tableName": "1ef91706-8c1d-4569-b393-826e796e1cdd"
+          },
+          "BucketMaster": {
+            "tableName": "9dd8ef42-0981-447c-a680-7ebc9872a361"
+          },
+          "cityinfo": {
+            "tableName": "5d9c0094-8346-4a1e-b4da-91c4880b0b56"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "AM_StatusMaster",
+      "AppreciationCard",
+      "BucketMaster",
+      "cityinfo",
+      "AM_StatusMaster",
+      "AppreciationCard",
+      "BucketMaster",
+      "cityinfo"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ac30ba6f-5eeb-469b-b0c7-2b9a370ebb12"
+  },
+  "f2c071b9-7215-4665-a1b3-4e3dde415fbe": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3310/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://ascenworktech.sharepoint.com/sites/TraineePractice": {
+        "dataSources": {
+          "Edetails": {
+            "tableName": "f039945b-dd3e-4e9d-a1ef-de8357bca2d8"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Edetails",
+      "Edetails"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f2c071b9-7215-4665-a1b3-4e3dde415fbe"
+  }
+}

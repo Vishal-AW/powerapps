@@ -1,0 +1,207 @@
+"Screen2 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: |-
+        =ClearCollect(Header,{FirstName:"FirstName",LastName:"LastName",Location:"location",Salary:"Salary"})
+
+    RectQuickActionBar8 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName8 As label:
+        Align: =Align.Center
+        Font: =Font.Arial
+        FontWeight: =FontWeight.Bold
+        Height: =88
+        Size: =30
+        Text: ="Employee Details"
+        Underline: =true
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas8 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar8.Y + RectQuickActionBar8.Height
+        ZIndex: =3
+
+        DataCard8 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =619
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Gallery9 As gallery.galleryVertical:
+                Height: =434
+                Items: =Edetails
+                Layout: =Layout.Vertical
+                TemplateSize: =70
+                Width: =1348
+                X: =3
+                Y: =66
+                ZIndex: =1
+
+                Label36 As label:
+                    Font: =Font.Arial
+                    OnSelect: =Select(Parent)
+                    Size: =20
+                    Text: =ThisItem.LastName
+                    X: =307
+                    Y: =15
+                    ZIndex: =4
+
+                Label37 As label:
+                    Font: =Font.Arial
+                    OnSelect: =Select(Parent)
+                    Size: =20
+                    Text: =ThisItem.Location.Value
+                    Width: =174
+                    X: =589
+                    Y: =15
+                    ZIndex: =5
+
+                Label39 As label:
+                    Font: =Font.Arial
+                    OnSelect: =Select(Parent)
+                    Size: =20
+                    Text: =ThisItem.FirstName
+                    X: =54
+                    Y: =15
+                    ZIndex: =7
+
+                Label40 As label:
+                    Font: =Font.Arial
+                    OnSelect: =Select(Parent)
+                    Size: =20
+                    Text: =ThisItem.Salary
+                    X: =896
+                    Y: =15
+                    ZIndex: =8
+
+                Icon4 As icon.Add:
+                    Height: =51
+                    Icon: =Icon.Add
+                    OnSelect: |-
+                        =Select(Parent);Navigate(Screen1,ScreenTransition.Cover,{selecteditem:Defaults(Edetails)})
+                    Width: =61
+                    X: =1066
+                    Y: =19
+                    ZIndex: =9
+
+                Icon6 As icon.Edit:
+                    Height: =51
+                    Icon: =Icon.Edit
+                    OnSelect: |-
+                        =//Select(Parent);Navigate(Screen3,ScreenTransition.Cover,{selecteditem:Gallery9.Selected})
+                        Select(Parent);Navigate(Screen3,ScreenTransition.Cover,{selecteditem:Gallery8.Selected});
+                        Set(HRID,Gallery9.Selected.ID)
+                    Width: =61
+                    X: =1147
+                    Y: =15
+                    ZIndex: =10
+
+                Icon8 As icon.Trash:
+                    Height: =51
+                    Icon: =Icon.Trash
+                    OnSelect: =Select(Parent);Remove(Edetails,ThisItem)
+                    Width: =61
+                    X: =1229
+                    Y: =19
+                    ZIndex: =11
+
+            Label30 As label:
+                Text: ="Text"
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+    Gallery8 As gallery.galleryVertical:
+        BorderColor: =RGBA(255, 0, 0, 1)
+        Fill: =RGBA(253, 222, 207, 1)
+        Height: =67
+        Items: =Header
+        Layout: =Layout.Vertical
+        TemplateSize: =62
+        Width: =1362
+        X: =3
+        Y: =88
+        ZIndex: =4
+
+        Label21 As label:
+            Color: =RGBA(246, 88, 16, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.FirstName
+            X: =31
+            Y: =9
+            ZIndex: =1
+
+        Label22 As label:
+            Color: =RGBA(246, 88, 16, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.LastName
+            X: =277
+            Y: =9
+            ZIndex: =2
+
+        Label23 As label:
+            Color: =RGBA(246, 88, 16, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.Location
+            X: =589
+            Y: =9
+            ZIndex: =3
+
+        Label24 As label:
+            Color: =RGBA(246, 88, 16, 1)
+            Fill: =RGBA(253, 222, 207, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =20
+            Text: =ThisItem.Salary
+            X: =890
+            Y: =9
+            ZIndex: =4
+
+        Icon1 As icon.Add:
+            Height: =51
+            Icon: =Icon.Add
+            OnSelect: =Select(Parent)
+            Width: =61
+            X: =1070
+            Y: =9
+            ZIndex: =5
+
+        Icon2 As icon.Edit:
+            Height: =51
+            Icon: =Icon.Edit
+            OnSelect: =Select(Parent)
+            Width: =61
+            X: =1147
+            Y: =9
+            ZIndex: =6
+
+        Icon3 As icon.Trash:
+            Height: =51
+            Icon: =Icon.Trash
+            OnSelect: =Select(Parent)
+            Width: =61
+            X: =1224
+            Y: =9
+            ZIndex: =7
+
