@@ -34,7 +34,8 @@
       "AM_StatusMaster",
       "AppreciationCard",
       "BucketMaster",
-      "cityinfo"
+      "cityinfo",
+      "Edetails"
     ],
     "dependencies": {},
     "dependents": [],
