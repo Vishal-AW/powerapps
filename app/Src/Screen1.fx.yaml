@@ -312,3 +312,9 @@ Screen1 As screen:
         Y: =561
         ZIndex: =4
 
+    Label2 As label:
+        Text: ="New value"
+        X: =88
+        Y: =438
+        ZIndex: =5
+
